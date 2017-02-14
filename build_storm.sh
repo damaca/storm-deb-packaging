@@ -8,7 +8,6 @@ arch="all"
 section="misc"
 package_version="-1"
 src_package="apache-storm-${version}.tar.gz"
-download_url="https://github.com/downloads/nathanmarz/storm/${src_package}"
 download_url="http://apache.rediris.es/storm/apache-storm-${version}/${src_package}"
 origdir=$(python -c 'import os,sys;print os.path.realpath(sys.argv[1])' $0/..)
 storm_root_dir=/opt/storm
@@ -22,7 +21,7 @@ if [ -d tmp ]; then
 fi
 # Download code if not exists
 if [[ ! -f "${src_package}" ]]; then
-  curl -L -s -o ${src_package} ${download_url}
+  wget ${download_url} -P $origdir
 fi
 # Make build directory, save location
 mkdir -p tmp && pushd tmp
