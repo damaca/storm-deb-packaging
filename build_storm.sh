@@ -9,7 +9,7 @@ section="misc"
 package_version="-1"
 src_package="apache-storm-${version}.tar.gz"
 download_url="https://github.com/downloads/nathanmarz/storm/${src_package}"
-download_url="http://www.apache.org/dyn/closer.lua/storm/apache-storm-${version}/${src_package}"
+download_url="http://apache.rediris.es/storm/apache-storm-${version}/${src_package}"
 origdir=$(python -c 'import os,sys;print os.path.realpath(sys.argv[1])' $0/..)
 storm_root_dir=/opt/storm
 
